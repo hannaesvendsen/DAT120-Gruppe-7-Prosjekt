@@ -7,6 +7,32 @@ og hente den fra fil. Avtaleboka skal kunne registrere avtaler med tittel,
  sted, start-tidspunkt og 
 varighet 
 """
+
+import datetime as dt
+
+x = dt.datetime.now()
+
+class Avtale:
+  def __init__(self, tittel, sted, start, varighet):
+    self.tittel = tittel
+    self.sted = sted
+    self.start = x
+    self.varighet = varighet
+    
+    
+  def __str__(self):
+    return f"tittel: {self.tittel}, Sted: {self.sted}, starttidspunkt: {self.start}, Varighet: {self.varighet}min" 
+
+A1 = Avtale("Møte", "Stavanger", "placeholder", 30)
+
+print(A1)
+
+A2 = Avtale("Fotball", "Drammen", "placeholder", 90)
+print(A2)
+
+
+
+
 from datetime import datetime
 
 x = datetime.datetime(2022, 1, 11)
