@@ -7,7 +7,6 @@ og hente den fra fil. Avtaleboka skal kunne registrere avtaler med tittel,
  sted, start-tidspunkt og 
 varighet 
 """
-
 from datetime import datetime
 
 x = datetime.datetime(2022, 1, 11)
@@ -23,21 +22,14 @@ class avtale:
         return f'tittel {self.tittel}, sted {self.sted},starttidspunkt {self.startTidspunkt}, varighet {self.varighet}'
         
     def ny_avtale(self):
-        try:
-            lst = []  
-            n = int(input("Skriv inn avtalen(tittel, sted, startpunkt og varighet i minutter) : "))
-
-            for i in range(0, n):
-                ele = int(input())
-            lst.append(ele) 
-            print(lst)     
-        except ValueError:
-            try:               
-                n = float(input)
-                print("ditt input er ikke gyldig prøv på nytt. Du skrev =", n)
-            
+        tittel1, sted1, startpunkt1, varighet1 = input("Skriv inn detaljene til avtalen ").split()
+        print("Tittelen er {},sted er {}, startpunkt er {} og varighet i minutter er {} for avtalen".format(tittel1, sted1, startpunkt1, varighet1))
+        print()
+        
+        
     
 
-       
+
+  
 avtale_1 = avtale('Markus', 'Madla',x.strftime("%B") ,20)
 avtale_2 = avtale('Nora', 'Storhaug',x.strftime("%B") ,30)
