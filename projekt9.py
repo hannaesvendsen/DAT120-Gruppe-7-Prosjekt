@@ -31,7 +31,7 @@ A2 = Avtale("Fotball", "Drammen", "placeholder", 90)
 print(A2)
 
 
-
+jefhiwhufifhuwfhwjhdbfejb yes
 
 from datetime import datetime
 
