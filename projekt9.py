@@ -33,29 +33,26 @@ print(A2)
 
 
 
-from datetime import datetime
-
-x = datetime.datetime(2022, 1, 11)
-class avtale:
+def ny_avtale():
+    Avtalen = None
+    while not Avtalen:
+        try:        
+            tittel_1 = input("Angi tittel til avtalen : ")
+            sted_1 = input("Angi stedet til avtalen : ")
+            start_tidspunkt_1 = input("Angi dato og tidspunkt på formatet: dd:mm:yyyy tt:mm ")
+            start_tidspunktdaytime = dt.datetime.strptime(start_tidspunkt_1, "%d:%m:%Y %H:%M")
+            varighet_1 = int(input("Angi varighte i minutter :"))
+            Avtalen=Avtale(tittel_1, sted_1, start_tidspunktdaytime, varighet_1)
+        except Exception as error:
+                print(error)
+    return Avtalen
     
-    def __init__(self, tittel, sted, startTidspunkt, varighet):
-        self.tittel = tittel
-        self.sted = sted
-        self.startTidspunkt = startTidspunkt
-        self.varighet = varighet
+     
+a=ny_avtale()
+print(a)
+# A1 = Avtale("Møte", "Stavanger", "placeholder", 30)
 
-    def __str__(self):
-        return f'tittel {self.tittel}, sted {self.sted},starttidspunkt {self.startTidspunkt}, varighet {self.varighet}'
-        
-    def ny_avtale(self):
-        tittel1, sted1, startpunkt1, varighet1 = input("Skriv inn detaljene til avtalen ").split()
-        print("Tittelen er {},sted er {}, startpunkt er {} og varighet i minutter er {} for avtalen".format(tittel1, sted1, startpunkt1, varighet1))
-        print()
-        
-        
-    
+# print(A1)
 
-
-  
-avtale_1 = avtale('Markus', 'Madla',x.strftime("%B") ,20)
-avtale_2 = avtale('Nora', 'Storhaug',x.strftime("%B") ,30)
+# A2 = Avtale("Fotball", "Drammen", "placeholder", 90)
+# print(A2)
