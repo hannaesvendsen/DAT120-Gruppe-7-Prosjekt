@@ -10,7 +10,7 @@ varighet
 
 import datetime as dt
 
-x = dt.datetime.now()
+
 
 class Avtale:
   def __init__(self, tittel, sted, start, varighet):
@@ -32,7 +32,7 @@ print(A2)
 
 
 
-import datetime as dt
+
 
 x = dt.datetime.now()
 
