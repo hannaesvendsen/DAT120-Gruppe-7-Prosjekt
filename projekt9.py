@@ -7,18 +7,6 @@ og hente den fra fil. Avtaleboka skal kunne registrere avtaler med tittel,
  sted, start-tidspunkt og 
 varighet 
 """
-
-import datetime as dt
-
-
-
-class Avtale:
-  def __init__(self, tittel, sted, start, varighet):
-    self.tittel = tittel
-    self.sted = sted
-    self.start = x
-    self.varighet = varighet
-    
     
 import datetime as dt
 
