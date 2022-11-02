@@ -68,27 +68,3 @@ avtaler_liste.append(A2)
 #avtale_funksjon(avtaler_liste)
 avtale_funksjon(avtaler_liste, "Avtaler")
 
-
-def ny_avtale():
-    Avtalen = None
-    while not Avtalen:
-        try:        
-            tittel_1 = input("Angi tittel til avtalen : ")
-            sted_1 = input("Angi stedet til avtalen : ")
-            start_tidspunkt_1 = input("Angi dato og tidspunkt på formatet: dd:mm:yyyy tt:mm ")
-            start_tidspunktdaytime = dt.datetime.strptime(start_tidspunkt_1, "%d:%m:%Y %H:%M")
-            varighet_1 = int(input("Angi varighte i minutter :"))
-            Avtalen=Avtale(tittel_1, sted_1, start_tidspunktdaytime, varighet_1)
-        except Exception as error:
-                print(error)
-    return Avtalen
-    
-     
-a=ny_avtale()
-print(a)
-# A1 = Avtale("Møte", "Stavanger", "placeholder", 30)
-
-# print(A1)
-
-# A2 = Avtale("Fotball", "Drammen", "placeholder", 90)
-# print(A2)
