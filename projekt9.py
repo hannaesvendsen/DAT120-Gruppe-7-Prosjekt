@@ -43,12 +43,11 @@ print (a)
       
       
 def avtale_funksjon(ordliste, overskrift=""):
-    #print(ordliste)
     print(overskrift)
+    indeks = 1
     for avtale in ordliste:
-        print(avtale)
-    for i in ordliste:
-        print(ordliste[i])
+        print(f"{indeks}: {avtale}")
+        indeks += 1
       
 avtaler_liste = list()
 
