@@ -20,19 +20,7 @@ class Avtale:
     self.varighet = varighet
     
     
-  def __str__(self):
-    return f"tittel: {self.tittel}, Sted: {self.sted}, starttidspunkt: {self.start}, Varighet: {self.varighet}min" 
-
-A1 = Avtale("Møte", "Stavanger", "placeholder", 30)
-
-print(A1)
-
-A2 = Avtale("Fotball", "Drammen", "placeholder", 90)
-print(A2)
-
-
-
-
+import datetime as dt
 
 x = dt.datetime.now()
 
@@ -58,15 +46,17 @@ def avtale_funksjon(ordliste, overskrift=""):
     print(overskrift)
     for avtale in ordliste:
         print(avtale)
+    for i in ordliste:
+        print(ordliste[i])
       
 avtaler_liste = list()
 
 A1 = Avtale("Møte", "Stavanger", "placeholder", 30)
 
-print(A1)
+
 
 A2 = Avtale("Fotball", "Drammen", "placeholder", 90)
-print(A2)
+
 
 
 avtaler_liste.append(A1)
@@ -74,8 +64,8 @@ avtaler_liste.append(A2)
 
 
 
-avtale_funksjon(avtaler_liste)
-avtale_funksjon(avtaler_liste, "Denne gangen med overskrift")
+#avtale_funksjon(avtaler_liste)
+avtale_funksjon(avtaler_liste, "Avtaler")
 
 
 def ny_avtale():
