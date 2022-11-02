@@ -76,13 +76,13 @@ def menu ():
     print("[1] Lese inn avtale.")
     print("[2] Skrive inn avtale til fil.")
     print("[3] Skrive inn ny avtale")
-    print("[4] Skrive ut alle avtaler.)
+    print("[4] Skrive ut alle avtaler.")
     print("[5] Avslutte programmet")
 
     print("Du må ta valgene til venstre for å velge et alternativ")
 
 menu()
-optioin = int(input("Skriv inn ditt alternatv:"))
+option = int(input("Skriv inn ditt alternatv:"))
 
 while option !=0:
     if option == 1:
@@ -97,4 +97,3 @@ while option !=0:
 print()
 menu()
 option = int(input("Skriv inn ditt alternativ"))
-
