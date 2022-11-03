@@ -164,6 +164,12 @@ menu()
 option = int(input("Skriv inn ditt alternativ"))
 
 #M
+def slett_avtale():
+    indeksenTil = int(input("Hvilke indeksen til lisa vil du slette ? "))
+    
+    Avtale.remove(indeksenTil)
+ 
+    Avtale
 
 
 
