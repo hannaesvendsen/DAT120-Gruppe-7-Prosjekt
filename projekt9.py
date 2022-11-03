@@ -123,6 +123,18 @@ def is_dato(date_string):
            print(index)
         
         
+        
+#k
+def avtalerogstreng(liste_avtaler, streng=""):
+    retur_liste = list()
+    for avtale in liste_avtaler:
+        if streng in avtale.tittel:
+            retur_liste.append(avtale)
+    return retur_liste
+   
+ print(avtalerogstreng(avtaler_liste, "Møte"))
+
+        
 #l
 
 def menu ():
