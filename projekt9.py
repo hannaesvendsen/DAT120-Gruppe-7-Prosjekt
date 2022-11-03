@@ -106,7 +106,23 @@ def is_dato(date_string):
     for index, item in enumerate(x):
         if is_dato(item):
            print(index)
+
+import pandas as pd 
+
+x = ["test", "Stavanger","27.02.2020", "300"]
+def is_dato(date_string):
+    try:
+        pd.to_datetime(date_string, format='%d.%m.%Y')
+        return True
+    except Exception:
+        return False
     
+    x = ["test", "Stavanger","27.02.2020", "300" ]
+    for index, item in enumerate(x):
+        if is_dato(item):
+           print(index)
+        
+        
 #l
 
 def menu ():
@@ -166,6 +182,8 @@ def endre_avtale(Avtale):
     else: 
         print("Det du satt inn stemte ikke, prøv på nytt.")
 
-     
+      
+#N
+
 
 
