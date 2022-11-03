@@ -134,3 +134,38 @@ while option !=0:
 print()
 menu()
 option = int(input("Skriv inn ditt alternativ"))
+
+
+#m
+import datetime as dt
+
+def endre_avtale(Avtale):
+    print[Avtale]
+    print("Hvilken nøkkel vil du endre")
+    print["tittel"]
+    print["sted"]
+    print["starttidspunkt"]
+    print["varighet"]
+    valg = input("Skriv inn nøkkelen du vil endre:")
+    if valg.lower() == "tittel":
+        ny_tittel = input("skriv inn ny tittel")
+        Avtale.tittel = ny_tittel
+
+    elif valg.lower() == "sted":
+        nytt_sted = input("Skriv nye stedet")
+        Avtale.sted = nytt_sted
+    
+    elif valg.lower() == "starttidspunkt":
+        start_tidspunkt_1 = input("Angi dato og tidspunt på formatet. dd:mm:yyyy tt:mm")
+        nytt_starttidspunkt = dt.datetime.strptime(start_tidspunkt_1, "%d:%m:%Y %H:%M")
+        Avtale.start = nytt_starttidspunkt
+
+    elif valg.lower() == "varighet":
+        ny_varighet = int(input("angi den nye varigheten"))
+        Avtale.varighet = ny_varighet
+    else: 
+        print("Det du satt inn stemte ikke, prøv på nytt.")
+
+     
+
+
