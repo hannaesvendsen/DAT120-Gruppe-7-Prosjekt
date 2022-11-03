@@ -163,8 +163,12 @@ print()
 menu()
 option = int(input("Skriv inn ditt alternativ"))
 
+#M
 
-#m
+
+
+
+#N
 import datetime as dt
 
 def endre_avtale(Avtale):
@@ -194,8 +198,6 @@ def endre_avtale(Avtale):
     else: 
         print("Det du satt inn stemte ikke, prøv på nytt.")
 
-      
-#N
-
+    
 
 
