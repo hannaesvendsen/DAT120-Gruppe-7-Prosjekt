@@ -76,7 +76,7 @@ def setteLista_ifilen ():
     for element in avtale_lista_1:
         tekstfil.write(element + "\n")
         tekstfil.close()
-#j
+#i
 printUtlista = []
 
 def åpnefilen():
@@ -91,7 +91,22 @@ def åpnefilen():
             printUtlista.append(x)
 
     print(printUtlista)
-       
+#j
+import pandas as pd 
+
+
+def is_dato(date_string):
+    try:
+        pd.to_datetime(date_string, format='%d.%m.%Y')
+        return True
+    except Exception:
+        return False
+    
+    x = ["test", "Stavanger","27.02.2020", "300" ]
+    for index, item in enumerate(x):
+        if is_dato(item):
+           print(index)
+    
 #l
 
 def menu ():
