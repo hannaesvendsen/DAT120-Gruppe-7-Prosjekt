@@ -10,7 +10,7 @@ varighet
     
 import datetime as dt
 
-
+#d
 class Avtale:
   def __init__(self, tittel, sted, start, varighet):
     self.tittel = tittel
@@ -18,11 +18,11 @@ class Avtale:
     self.start = start
     self.varighet = varighet
     
-    
+#e    
   def __str__(self):
     return f"tittel: {self.tittel}, Sted: {self.sted}, starttidspunkt: {self.start}, Varighet: {self.varighet}min" 
 
-
+#f
 def ny_avtale():
     Avtalen = None
     while not Avtalen:
@@ -41,7 +41,7 @@ def ny_avtale():
 a=ny_avtale()
 print (a)
       
-      
+#g      
 def avtale_funksjon(ordliste, overskrift=""):
     print(overskrift)
     indeks = 1
@@ -68,7 +68,30 @@ avtaler_liste.append(A2)
 avtale_funksjon(avtaler_liste, "Avtaler")
 
 
+#h
 
+def setteLista_ifilen ():
+    avtale_lista_1 = ['Malin', 'Oslo', 'dd:mm:yyyy tt:mm', '120']
+    tekstfil = open("Avtalene.txt", "w")
+    for element in avtale_lista_1:
+        tekstfil.write(element + "\n")
+        tekstfil.close()
+#j
+printUtlista = []
+
+def åpnefilen():
+# åpne filen og les innholdet i en liste
+    with open(r'Avtalene.txt', 'r') as fp:
+        for line in fp:
+        # fjerne linebreak fra et nåværende navn
+        # linebreak er det siste tegnet i hver linje
+            x = line[:-1]
+
+        # legge til gjeldende element i listen
+            printUtlista.append(x)
+
+    print(printUtlista)
+       
 #l
 
 def menu ():
