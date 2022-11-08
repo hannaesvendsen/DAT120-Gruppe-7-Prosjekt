@@ -215,3 +215,44 @@ if __name__=="__main__":
     menu()
     
 # menu()
+
+
+
+
+
+#ØVING 10!!!!
+
+
+#C
+class Kategori:
+    def __init__(self, tid, navn, prioritet=1):
+        self.tid=tid
+        self.navn=navn
+        self.prioritet=prioritet
+        
+        
+    def __str__(self):
+        return f"tid: {self.tid}, Navn: {self.navn}, Prioritet: {self.prioritet}" 
+    
+#D
+def ny_kategori():
+    tid=input("Skriv inn tiden: ")
+    navn=input("Skriv inn navn: ")
+    prioritet=input("Skriv inn prioriteten til kategorien: ")
+    return Kategori(tid, navn, prioritet)
+
+
+
+#E Lagrer 
+def Kategori_i_fil(liste):
+    tekstfil = open("kategorier.txt", "w")
+    for kategori in liste:
+        tekstfil.write(f"{kategori.tid};{kategori.navn};{kategori.prioritet}\n")
+    tekstfil.close()
+    
+#E Leser inn
+
+    
+
+print(ny_kategori())
+
